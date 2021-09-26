@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Enigmaque</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="anonymous">Anonymous</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="your_score_is_0_10">Your Score is : 0/10</string>
+    <string name="yourscore">Your Score is : %1$d/10</string>
+    <string name="wrong_attempts_0_3">Wrong Attempts: 0/3</string>
+    <string name="wrong_attempts">Wrong Attempts: %1$d/3</string>
+    <string name="reset">Reset</string>
+    <string name="client_id">Your id</string>
+    <string name="choose_your_profile_image"><u>Choose your profile image:</u></string>
+    <string name="you_have_completed_0_15_words">You have completed 0/15 words</string>
+    <string name="completed_words">You have completed %1$d/15 words</string>
+    <string name="player1_v">PlayerX v</string>
+    <string name="s_player2">s PlayerO</string>
+    <string name="player1_name">%1$s v</string>
+    <string name="player2_name">s %1$s</string>
+    <string name="player1_name_notunderlined">%1$s v</string>
+    <string name="player2_name_notunderlined">s %1$s</string>
+    <string name="wins">%1$s wins</string>
+    <string name="toastText">"Great! Let's get the game face on!! 😤😤"</string>
+    <string name="congratulations_you_won">Congratulations!!
+        \nYou Won!!</string>
+</resources>

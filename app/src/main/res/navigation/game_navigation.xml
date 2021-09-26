@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_navigation"
+    app:startDestination="@id/cardMatchingFragment">
+
+    <fragment
+        android:id="@+id/cardMatchingFragment"
+        android:name="com.sanchit.enigmaque.cardmatching.CardMatchingFragment"
+        android:label="fragment_card_matching"
+        tools:layout="@layout/fragment_card_matching" />
+    <fragment
+        android:id="@+id/sudokuFragment"
+        android:name="com.sanchit.enigmaque.sudoku.SudokuFragment"
+        android:label="fragment_sudoku"
+        tools:layout="@layout/fragment_sudoku" />
+    <fragment
+        android:id="@+id/hangmanFragment"
+        android:name="com.sanchit.enigmaque.hangman.HangmanFragment"
+        android:label="fragment_hangman"
+        tools:layout="@layout/fragment_hangman" />
+    <fragment
+        android:id="@+id/ticTacToeFragment"
+        android:name="com.sanchit.enigmaque.TicTacToe.TicTacToeFragment"
+        android:label="fragment_tic_tac_toe"
+        tools:layout="@layout/fragment_tic_tac_toe" />
+</navigation>

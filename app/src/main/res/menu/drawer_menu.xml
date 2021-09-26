@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/cardMatchingFragment"
+            android:title="Card Matching"
+            android:icon="@drawable/ic_card_matching"
+            android:checkable="true"
+            />
+    </group>
+    <group
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/hangmanFragment"
+            android:title="Hangman"
+            android:icon="@drawable/ic_hangman"
+            android:checkable="true"/>
+    </group>
+    <group
+        android:id="@+id/group3">
+        <item
+            android:id="@+id/sudokuFragment"
+            android:title="Sudoku Decoding"
+            android:icon="@drawable/sudoku"
+            android:checkable="true"/>
+    </group>
+    <group
+        android:id="@+id/group4">
+        <item
+            android:id="@+id/ticTacToeFragment"
+            android:title="TicTacToe"
+            android:icon="@drawable/tictactoe"
+            android:checkable="true"/>
+    </group>
+</menu>

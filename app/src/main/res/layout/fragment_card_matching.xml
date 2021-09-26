@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sanchit.enigmaque.cardmatching.CardMatchingViewModel" />
+    </data>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardFragmentMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88FFAB91">
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/konfettiView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tapCardTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap on a card to match with other cards"
+            android:textAlignment="center"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@id/cardsContainingLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardsContainingLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".cardmatching.CardMatchingFragment">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card1"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card2"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card1"
+                app:layout_constraintTop_toTopOf="@id/card1"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card3"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card2"
+                app:layout_constraintTop_toTopOf="@id/card2"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card4"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card3"
+                app:layout_constraintTop_toTopOf="@id/card3"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card5"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="24dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                android:scaleType="center"
+                app:layout_constraintEnd_toStartOf="@+id/card6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card1"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card6"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card7"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card5"
+                app:layout_constraintTop_toTopOf="@id/card5"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card7"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card8"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card6"
+                app:layout_constraintTop_toTopOf="@id/card6"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card8"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card7"
+                app:layout_constraintTop_toTopOf="@id/card7"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card9"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintStart_toStartOf="@id/card1"
+                app:layout_constraintTop_toBottomOf="@id/card8"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card10"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card11"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card9"
+                app:layout_constraintTop_toTopOf="@id/card9"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card11"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card12"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card10"
+                app:layout_constraintTop_toTopOf="@id/card9"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card12"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card11"
+                app:layout_constraintTop_toTopOf="@id/card9"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card13"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintStart_toStartOf="@id/card1"
+                app:layout_constraintTop_toBottomOf="@id/card9"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card14"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card15"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card13"
+                app:layout_constraintTop_toTopOf="@id/card13"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card15"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card16"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card14"
+                app:layout_constraintTop_toTopOf="@id/card13"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card16"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card15"
+                app:layout_constraintTop_toTopOf="@id/card13"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card17"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintStart_toStartOf="@id/card1"
+                app:layout_constraintTop_toBottomOf="@id/card13"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card18"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card19"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card17"
+                app:layout_constraintTop_toTopOf="@id/card17"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card19"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toStartOf="@+id/card20"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card18"
+                app:layout_constraintTop_toTopOf="@id/card17"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/card20"
+                android:layout_width="72dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:shapeAppearanceOverlay="@style/CircularAppearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card19"
+                app:layout_constraintTop_toTopOf="@id/card17"
+                app:srcCompat="@mipmap/back_card_pic_foreground" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_score_is_0_10"
+            android:textAlignment="center"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="32sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardsContainingLayout" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/congratsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/congratulations_you_won"
+            android:textAllCaps="true"
+            android:textSize="36sp"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            android:visibility="gone"
+            android:textColor="@color/primaryDarkColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/reset"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardsContainingLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
