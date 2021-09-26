@@ -6,6 +6,7 @@
 <br>
 <img src="https://github.com/sanchitvasdev/Enigmaque/blob/master/Card%20matching.jpeg" style="width: 350px; height: 700px">
 <h3><i>Let's celebrate the victory!</i></h3>
+<br>
 <img src="https://github.com/sanchitvasdev/Enigmaque/blob/master/Card%20matching%20win.jpeg" style="width: 350px; height: 700px">
 <h3><i>Guess the correct word and prevent the man from hanging.</i></h3>
 <br>
