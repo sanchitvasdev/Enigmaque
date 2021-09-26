@@ -1,5 +1,5 @@
 <h1>Enigmaque</h1>
-<h3>This is an app in which you can play various short-time games. It includes very famous games like Sudoku and TicTacToe.</h3>
+<h3>This is an app in which you can play various short-time games. It includes very famous games like Sudoku and TicTacToe. Following are the app screens:</h3>
 <br>
 <br>
 <h3><i>Match all 10 pairs of cards to win the game.</i></h3>
